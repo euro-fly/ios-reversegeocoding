@@ -63,8 +63,6 @@
         [manager stopUpdatingLocation];
         NSLog(@"[GEO] %f %f", position.coordinate.latitude, position.coordinate.longitude);
         return position;
-        //NSLog(@"[GEO] %f %f", latlong[0].doubleValue, latlong[1].doubleValue);
-        //return latlong;
     }
     else {
         return nil;
