@@ -13,9 +13,9 @@
 }
 
 + (NSString*) GetCurrentPrefecture {
-    NSArray<NSNumber *> *latlong = [LocationManager GetCurrentLocation];
-    double lat = latlong[0].doubleValue;
-    double lon = latlong[1].doubleValue;
+    CLLocation* latlong = [LocationManager GetCurrentLocation];
+    double lat = latlong.coordinate.latitude;
+    double lon = latlong.coordinate.longitude;
     NSString *url = [NSString stringWithFormat:@"https://nominatim.openstreetmap.org/reverse?format=json&lat=%f&lon=%f&zoom=18&addressdetails=&accept-language=ja", lat, lon];
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
     NSError *myError = nil;
@@ -37,8 +37,21 @@
     }
 }
 
++ (void) ReverseGeocoding {
+    CLLocation *loc = [LocationManager GetCurrentLocation];
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:loc preferredLocale:locale completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if(placemarks && placemarks.count > 0)
+         {
+             CLPlacemark *placemark= [placemarks objectAtIndex:0];
+             NSLog(@"[GEO] Current Prefecture: %@", [placemark administrativeArea]);
+         }     }];
+}
+
 // ideally you want to cache this result in whatever function is calling it. the other two methods are just for the sake of completion.
-+ (NSArray<NSNumber *>*) GetCurrentLocation {
++ (CLLocation*) GetCurrentLocation {
     CLLocationManager *manager = [[CLLocationManager alloc] init];
     if ([CLLocationManager locationServicesEnabled]) {
         manager.delegate = nil;
@@ -47,31 +60,27 @@
         [manager requestWhenInUseAuthorization];
         [manager startUpdatingLocation];
         CLLocation *position = manager.location;
-        NSArray<NSNumber*> *latlong = [[NSArray alloc] initWithObjects: [NSNumber numberWithDouble:position.coordinate.latitude],[NSNumber numberWithDouble:position.coordinate.longitude], nil];
         [manager stopUpdatingLocation];
-        NSLog(@"[GEO] %f %f", latlong[0].doubleValue, latlong[1].doubleValue);
-        return latlong;
+        NSLog(@"[GEO] %f %f", position.coordinate.latitude, position.coordinate.longitude);
+        return position;
+        //NSLog(@"[GEO] %f %f", latlong[0].doubleValue, latlong[1].doubleValue);
+        //return latlong;
     }
     else {
-        NSArray<NSNumber*> *latlong = [[NSArray alloc] init];
-        return latlong;
+        return nil;
     }
 }
 
 + (double) GetCurrentLatitude {
-    NSArray<NSNumber*> *latlong = [LocationManager GetCurrentLocation];
-    if (latlong.count != 2) {
-        return -900;
-    }
-    return latlong[0].doubleValue;
+    CLLocation *loc = [LocationManager GetCurrentLocation];
+    if (loc == nil) {return 0;}
+    return loc.coordinate.latitude;
 }
 
 + (double) GetCurrentLongitude {
-    NSArray<NSNumber*> *latlong = [LocationManager GetCurrentLocation];
-    if (latlong.count != 2) {
-        return -900;
-    }
-    return latlong[1].doubleValue;
+    CLLocation *loc = [LocationManager GetCurrentLocation];
+    if (loc == nil) {return 0;}
+    return loc.coordinate.longitude;
 }
 
 @end

@@ -38,6 +38,7 @@
 }
 
 - (IBAction)getPrefecture:(id)sender {
-    _prefectureLabel.text = [LocationManager GetCurrentPrefecture];
+    [LocationManager ReverseGeocoding];
+    //_prefectureLabel.text = [LocationManager GetCurrentPrefecture];
 }
 @end

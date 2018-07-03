@@ -2,9 +2,10 @@
 
 @interface LocationManager: NSObject <CLLocationManagerDelegate> {
 }
-+ (NSArray<NSNumber *>*) GetCurrentLocation;
++ (CLLocation *) GetCurrentLocation;
 + (double) GetCurrentLatitude;
 + (double) GetCurrentLongitude;
 + (NSString *) GetCurrentPrefecture;
 + (void) GetPermission;
++ (void) ReverseGeocoding;
 @end
