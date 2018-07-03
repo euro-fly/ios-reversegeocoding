@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16D7B8E320EB12AD00B11E97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B8E220EB12AD00B11E97 /* AppDelegate.m */; };
+		16D7B8E620EB12AD00B11E97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B8E520EB12AD00B11E97 /* ViewController.m */; };
+		16D7B8E920EB12AD00B11E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D7B8E720EB12AD00B11E97 /* Main.storyboard */; };
+		16D7B8EB20EB12B800B11E97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16D7B8EA20EB12B800B11E97 /* Assets.xcassets */; };
+		16D7B8EE20EB12B800B11E97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16D7B8EC20EB12B800B11E97 /* LaunchScreen.storyboard */; };
+		16D7B8F120EB12B800B11E97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B8F020EB12B800B11E97 /* main.m */; };
+		16D7B8FB20EB12B900B11E97 /* reversegeocoding_test1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B8FA20EB12B900B11E97 /* reversegeocoding_test1Tests.m */; };
+		16D7B90620EB12B900B11E97 /* reversegeocoding_test1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B90520EB12B900B11E97 /* reversegeocoding_test1UITests.m */; };
+		16D7B91620EB187800B11E97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16D7B91520EB187800B11E97 /* MapKit.framework */; };
+		16D7B91820EB18BB00B11E97 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D7B91720EB18BB00B11E97 /* LocationManager.m */; };
+		D55622E0E75644B9241C607B /* libPods-reversegeocoding-test1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B1C98EECF365AD1A455F9BD /* libPods-reversegeocoding-test1.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16D7B8F720EB12B900B11E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D7B8D620EB12AD00B11E97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16D7B8DD20EB12AD00B11E97;
+			remoteInfo = "reversegeocoding-test1";
+		};
+		16D7B90220EB12B900B11E97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16D7B8D620EB12AD00B11E97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16D7B8DD20EB12AD00B11E97;
+			remoteInfo = "reversegeocoding-test1";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		042D47E65EF1E0C15A005A4B /* Pods-reversegeocoding-test1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reversegeocoding-test1.release.xcconfig"; path = "Pods/Target Support Files/Pods-reversegeocoding-test1/Pods-reversegeocoding-test1.release.xcconfig"; sourceTree = "<group>"; };
+		16D7B8DE20EB12AD00B11E97 /* reversegeocoding-test1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "reversegeocoding-test1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D7B8E120EB12AD00B11E97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		16D7B8E220EB12AD00B11E97 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		16D7B8E420EB12AD00B11E97 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		16D7B8E520EB12AD00B11E97 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		16D7B8E820EB12AD00B11E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16D7B8EA20EB12B800B11E97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16D7B8ED20EB12B800B11E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16D7B8EF20EB12B800B11E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D7B8F020EB12B800B11E97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		16D7B8F620EB12B900B11E97 /* reversegeocoding-test1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reversegeocoding-test1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D7B8FA20EB12B900B11E97 /* reversegeocoding_test1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reversegeocoding_test1Tests.m; sourceTree = "<group>"; };
+		16D7B8FC20EB12B900B11E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D7B90120EB12B900B11E97 /* reversegeocoding-test1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "reversegeocoding-test1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16D7B90520EB12B900B11E97 /* reversegeocoding_test1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = reversegeocoding_test1UITests.m; sourceTree = "<group>"; };
+		16D7B90720EB12B900B11E97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16D7B91520EB187800B11E97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16D7B91720EB18BB00B11E97 /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		16F6A5E420EB289800E9EC3C /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		28A29D134865948D4DDA2442 /* Pods-reversegeocoding-test1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reversegeocoding-test1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-reversegeocoding-test1/Pods-reversegeocoding-test1.debug.xcconfig"; sourceTree = "<group>"; };
+		8B1C98EECF365AD1A455F9BD /* libPods-reversegeocoding-test1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-reversegeocoding-test1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D7B8DB20EB12AD00B11E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D7B91620EB187800B11E97 /* MapKit.framework in Frameworks */,
+				D55622E0E75644B9241C607B /* libPods-reversegeocoding-test1.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8F320EB12B900B11E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8FE20EB12B900B11E97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16D7B8D520EB12AD00B11E97 = {
+			isa = PBXGroup;
+			children = (
+				16D7B8E020EB12AD00B11E97 /* reversegeocoding-test1 */,
+				16D7B90420EB12B900B11E97 /* reversegeocoding-test1UITests */,
+				16D7B8F920EB12B900B11E97 /* reversegeocoding-test1Tests */,
+				16D7B8DF20EB12AD00B11E97 /* Products */,
+				16D7B91420EB187800B11E97 /* Frameworks */,
+				7652A0B33CF0258D245EC36D /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		16D7B8DF20EB12AD00B11E97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16D7B8DE20EB12AD00B11E97 /* reversegeocoding-test1.app */,
+				16D7B8F620EB12B900B11E97 /* reversegeocoding-test1Tests.xctest */,
+				16D7B90120EB12B900B11E97 /* reversegeocoding-test1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16D7B8E020EB12AD00B11E97 /* reversegeocoding-test1 */ = {
+			isa = PBXGroup;
+			children = (
+				16D7B8E120EB12AD00B11E97 /* AppDelegate.h */,
+				16D7B8E220EB12AD00B11E97 /* AppDelegate.m */,
+				16D7B8E420EB12AD00B11E97 /* ViewController.h */,
+				16D7B8E520EB12AD00B11E97 /* ViewController.m */,
+				16D7B8E720EB12AD00B11E97 /* Main.storyboard */,
+				16D7B8EA20EB12B800B11E97 /* Assets.xcassets */,
+				16D7B8EC20EB12B800B11E97 /* LaunchScreen.storyboard */,
+				16D7B8EF20EB12B800B11E97 /* Info.plist */,
+				16D7B8F020EB12B800B11E97 /* main.m */,
+				16D7B91720EB18BB00B11E97 /* LocationManager.m */,
+				16F6A5E420EB289800E9EC3C /* LocationManager.h */,
+			);
+			path = "reversegeocoding-test1";
+			sourceTree = "<group>";
+		};
+		16D7B8F920EB12B900B11E97 /* reversegeocoding-test1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				16D7B8FA20EB12B900B11E97 /* reversegeocoding_test1Tests.m */,
+				16D7B8FC20EB12B900B11E97 /* Info.plist */,
+			);
+			path = "reversegeocoding-test1Tests";
+			sourceTree = "<group>";
+		};
+		16D7B90420EB12B900B11E97 /* reversegeocoding-test1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				16D7B90520EB12B900B11E97 /* reversegeocoding_test1UITests.m */,
+				16D7B90720EB12B900B11E97 /* Info.plist */,
+			);
+			path = "reversegeocoding-test1UITests";
+			sourceTree = "<group>";
+		};
+		16D7B91420EB187800B11E97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16D7B91520EB187800B11E97 /* MapKit.framework */,
+				8B1C98EECF365AD1A455F9BD /* libPods-reversegeocoding-test1.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7652A0B33CF0258D245EC36D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28A29D134865948D4DDA2442 /* Pods-reversegeocoding-test1.debug.xcconfig */,
+				042D47E65EF1E0C15A005A4B /* Pods-reversegeocoding-test1.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16D7B8DD20EB12AD00B11E97 /* reversegeocoding-test1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D7B90A20EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1" */;
+			buildPhases = (
+				C29E6A4B185210EF6E3A5403 /* [CP] Check Pods Manifest.lock */,
+				16D7B8DA20EB12AD00B11E97 /* Sources */,
+				16D7B8DB20EB12AD00B11E97 /* Frameworks */,
+				16D7B8DC20EB12AD00B11E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "reversegeocoding-test1";
+			productName = "reversegeocoding-test1";
+			productReference = 16D7B8DE20EB12AD00B11E97 /* reversegeocoding-test1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16D7B8F520EB12B900B11E97 /* reversegeocoding-test1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D7B90D20EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1Tests" */;
+			buildPhases = (
+				16D7B8F220EB12B900B11E97 /* Sources */,
+				16D7B8F320EB12B900B11E97 /* Frameworks */,
+				16D7B8F420EB12B900B11E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16D7B8F820EB12B900B11E97 /* PBXTargetDependency */,
+			);
+			name = "reversegeocoding-test1Tests";
+			productName = "reversegeocoding-test1Tests";
+			productReference = 16D7B8F620EB12B900B11E97 /* reversegeocoding-test1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		16D7B90020EB12B900B11E97 /* reversegeocoding-test1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16D7B91020EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1UITests" */;
+			buildPhases = (
+				16D7B8FD20EB12B900B11E97 /* Sources */,
+				16D7B8FE20EB12B900B11E97 /* Frameworks */,
+				16D7B8FF20EB12B900B11E97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16D7B90320EB12B900B11E97 /* PBXTargetDependency */,
+			);
+			name = "reversegeocoding-test1UITests";
+			productName = "reversegeocoding-test1UITests";
+			productReference = 16D7B90120EB12B900B11E97 /* reversegeocoding-test1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16D7B8D620EB12AD00B11E97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Jacob;
+				TargetAttributes = {
+					16D7B8DD20EB12AD00B11E97 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					16D7B8F520EB12B900B11E97 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 16D7B8DD20EB12AD00B11E97;
+					};
+					16D7B90020EB12B900B11E97 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 16D7B8DD20EB12AD00B11E97;
+					};
+				};
+			};
+			buildConfigurationList = 16D7B8D920EB12AD00B11E97 /* Build configuration list for PBXProject "reversegeocoding-test1" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16D7B8D520EB12AD00B11E97;
+			productRefGroup = 16D7B8DF20EB12AD00B11E97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16D7B8DD20EB12AD00B11E97 /* reversegeocoding-test1 */,
+				16D7B8F520EB12B900B11E97 /* reversegeocoding-test1Tests */,
+				16D7B90020EB12B900B11E97 /* reversegeocoding-test1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16D7B8DC20EB12AD00B11E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D7B8EE20EB12B800B11E97 /* LaunchScreen.storyboard in Resources */,
+				16D7B8EB20EB12B800B11E97 /* Assets.xcassets in Resources */,
+				16D7B8E920EB12AD00B11E97 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8F420EB12B900B11E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8FF20EB12B900B11E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C29E6A4B185210EF6E3A5403 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reversegeocoding-test1-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16D7B8DA20EB12AD00B11E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D7B91820EB18BB00B11E97 /* LocationManager.m in Sources */,
+				16D7B8E620EB12AD00B11E97 /* ViewController.m in Sources */,
+				16D7B8F120EB12B800B11E97 /* main.m in Sources */,
+				16D7B8E320EB12AD00B11E97 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8F220EB12B900B11E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D7B8FB20EB12B900B11E97 /* reversegeocoding_test1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16D7B8FD20EB12B900B11E97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16D7B90620EB12B900B11E97 /* reversegeocoding_test1UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16D7B8F820EB12B900B11E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16D7B8DD20EB12AD00B11E97 /* reversegeocoding-test1 */;
+			targetProxy = 16D7B8F720EB12B900B11E97 /* PBXContainerItemProxy */;
+		};
+		16D7B90320EB12B900B11E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16D7B8DD20EB12AD00B11E97 /* reversegeocoding-test1 */;
+			targetProxy = 16D7B90220EB12B900B11E97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16D7B8E720EB12AD00B11E97 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D7B8E820EB12AD00B11E97 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16D7B8EC20EB12B800B11E97 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16D7B8ED20EB12B800B11E97 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16D7B90820EB12B900B11E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		16D7B90920EB12B900B11E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16D7B90B20EB12B900B11E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A29D134865948D4DDA2442 /* Pods-reversegeocoding-test1.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		16D7B90C20EB12B900B11E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 042D47E65EF1E0C15A005A4B /* Pods-reversegeocoding-test1.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		16D7B90E20EB12B900B11E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reversegeocoding-test1.app/reversegeocoding-test1";
+			};
+			name = Debug;
+		};
+		16D7B90F20EB12B900B11E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reversegeocoding-test1.app/reversegeocoding-test1";
+			};
+			name = Release;
+		};
+		16D7B91120EB12B900B11E97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "reversegeocoding-test1";
+			};
+			name = Debug;
+		};
+		16D7B91220EB12B900B11E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TV9KFY46P5;
+				INFOPLIST_FILE = "reversegeocoding-test1UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mycompany22aaaa.reversegeocoding-test1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "reversegeocoding-test1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16D7B8D920EB12AD00B11E97 /* Build configuration list for PBXProject "reversegeocoding-test1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D7B90820EB12B900B11E97 /* Debug */,
+				16D7B90920EB12B900B11E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D7B90A20EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D7B90B20EB12B900B11E97 /* Debug */,
+				16D7B90C20EB12B900B11E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D7B90D20EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D7B90E20EB12B900B11E97 /* Debug */,
+				16D7B90F20EB12B900B11E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16D7B91020EB12B900B11E97 /* Build configuration list for PBXNativeTarget "reversegeocoding-test1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D7B91120EB12B900B11E97 /* Debug */,
+				16D7B91220EB12B900B11E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16D7B8D620EB12AD00B11E97 /* Project object */;
+}
