@@ -12,6 +12,11 @@
 //http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=-117.205453,34.037988
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *prefectureLabel;
+@property (weak, nonatomic) IBOutlet UIButton *permissionButton;
+@property (weak, nonatomic) IBOutlet UIButton *prefectureButton;
+- (IBAction)requestPermission:(id)sender;
+- (IBAction)getPrefecture:(id)sender;
 
 @end
 
@@ -19,17 +24,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [LocationManager GetPermission];
-    [LocationManager GetCurrentPrefecture];
+    
+    
     // Do any additional setup after loading the view, typically from a nib.
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)requestPermission:(id)sender {
+    [LocationManager GetPermission];
+}
 
+- (IBAction)getPrefecture:(id)sender {
+    _prefectureLabel.text = [LocationManager GetCurrentPrefecture];
+}
 @end

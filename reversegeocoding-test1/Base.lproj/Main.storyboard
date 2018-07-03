@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="州" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-hW-KCc">
+                                <rect key="frame" x="125" y="300" width="125" height="67"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SN0-hY-7Pv">
+                                <rect key="frame" x="88" y="375" width="199" height="30"/>
+                                <state key="normal" title="位置情報の取得を許可させる"/>
+                                <connections>
+                                    <action selector="requestPermission:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fUw-Qn-B1t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypl-i1-wq6">
+                                <rect key="frame" x="118" y="413" width="138" height="30"/>
+                                <state key="normal" title="位置情報を取得する"/>
+                                <connections>
+                                    <action selector="getPrefecture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwO-q0-GNY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eS9-hW-KCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="3xo-ZF-Yqr"/>
+                            <constraint firstItem="ypl-i1-wq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EnQ-qk-pOY"/>
+                            <constraint firstItem="SN0-hY-7Pv" firstAttribute="centerX" secondItem="ypl-i1-wq6" secondAttribute="centerX" id="PBF-Z8-Jwg"/>
+                            <constraint firstItem="eS9-hW-KCc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="TzH-e5-qji"/>
+                            <constraint firstItem="SN0-hY-7Pv" firstAttribute="top" secondItem="eS9-hW-KCc" secondAttribute="bottom" constant="8" symbolic="YES" id="a7n-Ok-DG4"/>
+                            <constraint firstItem="eS9-hW-KCc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hA6-mp-4uv"/>
+                            <constraint firstItem="ypl-i1-wq6" firstAttribute="top" secondItem="SN0-hY-7Pv" secondAttribute="bottom" constant="8" symbolic="YES" id="mU6-8E-lg2"/>
+                            <constraint firstItem="eS9-hW-KCc" firstAttribute="centerX" secondItem="SN0-hY-7Pv" secondAttribute="centerX" id="ncR-ua-vf1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="permissionButton" destination="SN0-hY-7Pv" id="3Gw-bR-bjO"/>
+                        <outlet property="prefectureButton" destination="ypl-i1-wq6" id="bYg-aS-j6g"/>
+                        <outlet property="prefectureLabel" destination="eS9-hW-KCc" id="d5Q-78-0hQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
