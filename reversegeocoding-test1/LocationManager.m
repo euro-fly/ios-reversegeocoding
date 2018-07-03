@@ -3,7 +3,6 @@
 //  Joule
 //
 //  Created by Jacob on 2018/07/02.
-//  Copyright © 2018 Wellness Data Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,7 +11,6 @@
 
 @implementation LocationManager {
 }
-
 
 + (NSString*) GetCurrentPrefecture {
     NSArray<NSNumber *> *latlong = [LocationManager GetCurrentLocation];
@@ -39,7 +37,6 @@
         NSLog(@"[GEO] %@", [address objectForKey:@"state"]);
         return [address objectForKey:@"state"];
     }
-
 }
 
 + (void) GetPermission {
@@ -85,4 +82,5 @@
     }
     return latlong[1].doubleValue;
 }
+
 @end
