@@ -20,16 +20,7 @@
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
     NSError *myError = nil;
     NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
-    if (!res) {
-        return @"NONE";
-    }
-    else if (![res isKindOfClass:[NSDictionary class]]) {
-        return @"NONE";
-    }
-    else if ([res objectForKey:@"error"]) {
-        return @"NONE";
-    }
-    else if (![res objectForKey:@"address"]) {
+    if (!res || ![res isKindOfClass:[NSDictionary class]] || [res objectForKey:@"error"] || ![res objectForKey:@"address"]) {
         return @"NONE";
     }
     else {
