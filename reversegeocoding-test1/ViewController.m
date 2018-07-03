@@ -9,8 +9,6 @@
 #import "ViewController.h"
 #import "LocationManager.h"
 
-//http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode?f=pjson&featureTypes=&location=-117.205453,34.037988
-
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *prefectureLabel;
 @property (weak, nonatomic) IBOutlet UIButton *permissionButton;
