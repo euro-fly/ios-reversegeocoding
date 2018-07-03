@@ -13,9 +13,6 @@
 @implementation LocationManager {
 }
 
-//https://nominatim.openstreetmap.org/reverse?format=json&lat=35.655164046&lon=139.740663704&zoom=18&addressdetails=&accept-language=ja
-// NOTE: first check the JSON response if it has the key "error", and if it does, kill it
-// ELSE: check if it has the key "address", and find the key "state" within the value of that...
 
 + (NSString*) GetCurrentPrefecture {
     NSArray<NSNumber *> *latlong = [LocationManager GetCurrentLocation];
@@ -25,27 +22,18 @@
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url]];
     NSError *myError = nil;
     NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
-    if (!res) { // JSON parser failed
+    if (!res) {
         return @"NONE";
     }
-        
-    // dictionary (top-level)
     else if (![res isKindOfClass:[NSDictionary class]]) {
-        // JSON parser hasn't returned a dictionary
         return @"NONE";
     }
-    
     else if ([res objectForKey:@"error"]) {
-        // error out...
-        NSLog(@"[GEO] Error thrown by server...");
         return @"NONE";
     }
-    
     else if (![res objectForKey:@"address"]) {
-        NSLog(@"[GEO] Server did not return a valid address...");
         return @"NONE";
     }
-    
     else {
         NSDictionary *address = res[@"address"];
         NSLog(@"[GEO] %@", [address objectForKey:@"state"]);
@@ -57,10 +45,9 @@
 + (void) GetPermission {
     CLLocationManager *manager = [[CLLocationManager alloc] init];
     if ([CLLocationManager locationServicesEnabled]) {
-        [manager requestAlwaysAuthorization];
+        [manager requestWhenInUseAuthorization];
     }
 }
-
 
 // ideally you want to cache this result in whatever function is calling it. the other two methods are just for the sake of completion.
 + (NSArray<NSNumber *>*) GetCurrentLocation {
@@ -69,7 +56,7 @@
         manager.delegate = nil;
         manager.desiredAccuracy = kCLLocationAccuracyBest;
         manager.distanceFilter = kCLDistanceFilterNone;
-        [manager requestAlwaysAuthorization];
+        [manager requestWhenInUseAuthorization];
         [manager startUpdatingLocation];
         CLLocation *position = manager.location;
         NSArray<NSNumber*> *latlong = [[NSArray alloc] initWithObjects: [NSNumber numberWithDouble:position.coordinate.latitude],[NSNumber numberWithDouble:position.coordinate.longitude], nil];
