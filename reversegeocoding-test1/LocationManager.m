@@ -30,11 +30,25 @@
     }
 }
 
+
 + (void) GetPermission {
     CLLocationManager *manager = [[CLLocationManager alloc] init];
     if ([CLLocationManager locationServicesEnabled]) {
         [manager requestWhenInUseAuthorization];
     }
+}
+
++ (void) GetPrefectureFromPostalCode: (NSString*) postalCode {
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder geocodeAddressString:postalCode completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks objectAtIndex:0];
+        CLLocation *location = placemark.location;
+        CLLocationCoordinate2D coordinate = location.coordinate;
+        NSLog(@"Latitude %f", coordinate.latitude);
+        NSLog(@"Longitude %f", coordinate.longitude);
+        [LocationManager GetCurrentPrefectureWithLocation:location];
+    }];
+    
 }
 
 + (void) ReverseGeocoding {
@@ -49,6 +63,23 @@
              NSLog(@"[GEO] Current Prefecture: %@", [placemark administrativeArea]);
          }     }];
 }
+
++ (void) GetCurrentPrefectureWithLocation:(CLLocation *)location {
+    CLLocation *loc = location;
+    NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:loc preferredLocale:locale completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if(placemarks && placemarks.count > 0)
+         {
+             CLPlacemark *placemark= [placemarks objectAtIndex:0];
+             NSLog(@"[GEO] Current Prefecture: %@", [placemark administrativeArea]);
+             [[NSNotificationCenter defaultCenter]
+              postNotificationName:@"PrefectureUpdated"
+              object:placemark];
+         }     }];
+}
+
 
 // ideally you want to cache this result in whatever function is calling it. the other two methods are just for the sake of completion.
 + (CLLocation*) GetCurrentLocation {

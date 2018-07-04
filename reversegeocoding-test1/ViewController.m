@@ -12,9 +12,11 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *prefectureLabel;
 @property (weak, nonatomic) IBOutlet UIButton *permissionButton;
+@property (weak, nonatomic) IBOutlet UITextField *myTextField;
 @property (weak, nonatomic) IBOutlet UIButton *prefectureButton;
 - (IBAction)requestPermission:(id)sender;
 - (IBAction)getPrefecture:(id)sender;
+- (void)updateLabel:(NSNotification *) notification;
 
 @end
 
@@ -22,8 +24,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+    _myTextField.delegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateLabel:)
+                                                 name:@"PrefectureUpdated"
+                                               object:nil]; // <- SELF!!
     // Do any additional setup after loading the view, typically from a nib.
     
 }
@@ -41,4 +46,17 @@
     [LocationManager ReverseGeocoding];
     //_prefectureLabel.text = [LocationManager GetCurrentPrefecture];
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [LocationManager GetPrefectureFromPostalCode:textField.text];
+    return NO;
+}
+
+-(void)updateLabel:(NSNotification *) notification {
+    CLPlacemark *placemark = [notification object];
+    _prefectureLabel.text = [placemark administrativeArea];
+    
+}
+
 @end

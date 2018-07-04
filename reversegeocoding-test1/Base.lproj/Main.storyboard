@@ -38,13 +38,22 @@
                                     <action selector="getPrefecture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fwO-q0-GNY"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="郵便番号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-Mh-TCW">
+                                <rect key="frame" x="85" y="272" width="205" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eS9-hW-KCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="3xo-ZF-Yqr"/>
+                            <constraint firstItem="Tds-Mh-TCW" firstAttribute="top" secondItem="ypl-i1-wq6" secondAttribute="bottom" constant="-171" id="BhT-Wa-vOe"/>
                             <constraint firstItem="ypl-i1-wq6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EnQ-qk-pOY"/>
                             <constraint firstItem="SN0-hY-7Pv" firstAttribute="centerX" secondItem="ypl-i1-wq6" secondAttribute="centerX" id="PBF-Z8-Jwg"/>
                             <constraint firstItem="eS9-hW-KCc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="280" id="TzH-e5-qji"/>
+                            <constraint firstItem="Tds-Mh-TCW" firstAttribute="centerX" secondItem="ypl-i1-wq6" secondAttribute="centerX" id="ZmS-Iy-umc"/>
+                            <constraint firstItem="Tds-Mh-TCW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="85" id="ZyE-SJ-nbb"/>
                             <constraint firstItem="SN0-hY-7Pv" firstAttribute="top" secondItem="eS9-hW-KCc" secondAttribute="bottom" constant="8" symbolic="YES" id="a7n-Ok-DG4"/>
                             <constraint firstItem="eS9-hW-KCc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hA6-mp-4uv"/>
                             <constraint firstItem="ypl-i1-wq6" firstAttribute="top" secondItem="SN0-hY-7Pv" secondAttribute="bottom" constant="8" symbolic="YES" id="mU6-8E-lg2"/>
@@ -53,6 +62,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="myTextField" destination="Tds-Mh-TCW" id="N2f-Zy-AsC"/>
                         <outlet property="permissionButton" destination="SN0-hY-7Pv" id="3Gw-bR-bjO"/>
                         <outlet property="prefectureButton" destination="ypl-i1-wq6" id="bYg-aS-j6g"/>
                         <outlet property="prefectureLabel" destination="eS9-hW-KCc" id="d5Q-78-0hQ"/>
