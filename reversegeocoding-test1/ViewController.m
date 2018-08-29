@@ -44,7 +44,7 @@
 
 - (IBAction)getPrefecture:(id)sender {
     [LocationManager ReverseGeocoding];
-    //_prefectureLabel.text = [LocationManager GetCurrentPrefecture];
+    _prefectureLabel.text = [LocationManager GetCurrentPrefecture];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
